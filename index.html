@@ -1,16 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WikiPotter</title>
-    <script
-      src="https://kit.fontawesome.com/8e478fa44e.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
+    <header>
+      <img src="src/images/harrypotter.png" alt="logoharrypotter" />
+    </header>
+    <form>
+        <label>Buscar por personaje:
+          <input name="name" type="text" id="name" placeholder="Ej. Harry Potter" value="" />
+        </label>
+        <label>Selecciona la casa:
+          <select>
+            <option value="Gryffindor">Gryffindor</option>
+            <option value="Hufflepuff">Hufflepuff</option>
+            <option value="Slytherin">Slytherin</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+          </select>
+        </label>
+        <div className="filter_container">
+          <fieldset className="filter_gender">
+            <label>Género:</label>
+          <div className="filter_gender_radio">
+            <input type="radio" id="male" value="male">
+            <label for="male">Hombre</label>
+            <input type="radio" id="female" value="female">
+            <label for="female">Mujer</label>
+          </div>
+          </fieldset>
+      </div>
+    </form>
+    <button className="resetbtn">Reset</button>
+    <section className="Characters">
+      <ul className="CharacterList">
+        <li className="CharacterList_card">
+          <a className="link" href="">
+            <article className="card" id="">
+              <img src="" alt="">
+              <div className="card_text">
+                <h2>Nombre</h2>
+                <p>human</p>
+              </div>
+            </article>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <footer className="footer">
+      <img src="src/images/escudo.png" alt="">
+      <p>No recomendable el uso excesivo de esta página si eres muggle, en el caso contrario contacta con tu hechicero de confianza para más información</p>
+      <nav class="footer_nav">
+        "Contacto"
+        <ul className="footer_nav_list">
+          <li>
+            <a href=""></a>
+          </li>
+          <li>
+            <a href="https://github.com/elenavesc" target="_blank" className="footer_link">
+              <img src="" alt="">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
