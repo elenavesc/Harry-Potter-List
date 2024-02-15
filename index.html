@@ -2,39 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/src/images/escudo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WikiPotter</title>
   </head>
   <body>
-    <header>
-      <img src="src/images/harrypotter.png" alt="logoharrypotter" />
-    </header>
-    <form>
-        <label>Buscar por personaje:
-          <input name="name" type="text" id="name" placeholder="Ej. Harry Potter" value="" />
-        </label>
-        <label>Selecciona la casa:
-          <select>
-            <option value="Gryffindor">Gryffindor</option>
-            <option value="Hufflepuff">Hufflepuff</option>
-            <option value="Slytherin">Slytherin</option>
-            <option value="Ravenclaw">Ravenclaw</option>
-          </select>
-        </label>
-        <div className="filter_container">
-          <fieldset className="filter_gender">
-            <label>Género:</label>
-          <div className="filter_gender_radio">
-            <input type="radio" id="male" value="male">
-            <label for="male">Hombre</label>
-            <input type="radio" id="female" value="female">
-            <label for="female">Mujer</label>
-          </div>
-          </fieldset>
-      </div>
-    </form>
-    <button className="resetbtn">Reset</button>
+    
+   
     <section className="Characters">
       <ul className="CharacterList">
         <li className="CharacterList_card">
@@ -68,6 +42,6 @@
       </nav>
     </footer>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="src/main.jsx"></script>
   </body>
 </html>
