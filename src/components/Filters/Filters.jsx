@@ -37,4 +37,4 @@ Filters.propTypes = {
     handleReset: PropTypes.func,
   };
   
-  export default Filters;
+export default Filters;

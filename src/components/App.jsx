@@ -1,12 +1,15 @@
 import apiData from '../services/api';
 import { Route,Routes } from "react-router-dom";
 import Header from "./Header";
-import Footer from "./Footer";
+import { useState, useEffect } from 'react';
+import  Filters from './Filters/Filters';
+import CharacterList from './characters/CharacterList'
+import CharacterDetail from './characters/CharacterDetail'
 
 function App() {
     const [characters, setCharacters] = useState([]);
     const [filterName, setFilterName] = useState('');
-    const [filterHouse, setFilterHouse] = useState('Gryffindor');
+    const [filterHouse, setFilterHouse] = useState('');
     const [filterGender, setFilterGender] = useState('');
 
     useEffect(() => {
@@ -32,15 +35,7 @@ function App() {
           char.name.toLowerCase().includes(filterName.toLowerCase())
         )
         .filter((char) => {
-            if (!char.house) {
-              if (!char.wizard) {
-                return filterHouse === 'Muggles';
-              } else {
-                return filterHouse === 'Otros magos';
-              }
-            } else {
-              return char.house === filterHouse;
-            }
+           return filterHouse !== '' ? char.house && char.house === filterHouse : true
           })
           .filter((char) => {
             if (filterGender === 'female') {
@@ -50,12 +45,12 @@ function App() {
             } else {
               return true;
             }
-          });
+          }).sort((a, b) => a.name.localeCompare(b.name));
       
         const handleReset = (ev) => {
           ev.preventDefault();
           setFilterName('');
-          setFilterHouse('Gryffindor');
+          setFilterHouse('');
           setFilterGender('');
         };
       
@@ -80,11 +75,10 @@ return (
             }
         />
         <Route
-        path="/details/:urlID"
-        element={<CharcaterDetail data={characters}/>}
+        path="/details/:urlId"
+        element={<CharacterDetail data={characters}/>}
         />
         </Routes>
-        <Footer/>
     </div>
 );
 }

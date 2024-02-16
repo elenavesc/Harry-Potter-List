@@ -1,15 +1,15 @@
 import noImg from '../../images/noImg.png';
-import '../../scss/layout/CardDEtail.scss';
-import ProprTypes from 'prop-types';
+import '../../scss/layout/CardDetails.scss';
+import PropTypes from 'prop-types';
 
-const names = data.alternateNames.join(',');
+
 
 function CardDetail ({data}) {
-
+    const names = data.alternateNames.join(',');
     return (
         <article key={data.id} className={'cardDetail ${data.house}'}>
             <img 
-                src={data.img !==''? data.img: noImg} 
+                src={data.image !==''? data.image : noImg} 
                 alt={data.name} 
                 className='cardDetail_image'/>
             <div className='cardDetail_text'>
@@ -37,7 +37,7 @@ function CardDetail ({data}) {
     );
 }
 CardDetail.propTypes = {
-    data: ProprTypes.array,
+    data: PropTypes.object,
 };
 
 export default CardDetail;

@@ -7,6 +7,7 @@ function FilterHouse ({handleHouse}) {
           onChange={(ev) => {
             handleHouse(ev.target.value);
           } }>
+            <option value=''>Todas</option>
             <option value="Gryffindor">Gryffindor</option>
             <option value="Hufflepuff">Hufflepuff</option>
             <option value="Slytherin">Slytherin</option>
