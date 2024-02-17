@@ -5,12 +5,13 @@ import { useState, useEffect } from 'react';
 import  Filters from './Filters/Filters';
 import CharacterList from './characters/CharacterList'
 import CharacterDetail from './characters/CharacterDetail'
+import '../scss/App.scss'
 
 function App() {
     const [characters, setCharacters] = useState([]);
     const [filterName, setFilterName] = useState('');
     const [filterHouse, setFilterHouse] = useState('');
-    const [filterStatus, setFilterStatus] = useState(true);
+    const [filterStatus, setFilterStatus] = useState(null);
     const [filterGender, setFilterGender] = useState('');
 
     useEffect(() => {
@@ -54,11 +55,10 @@ function App() {
           }).sort((a, b) => a.name.localeCompare(b.name))
 
           .filter((char) => {
-            if (filterStatus === true) {
-              return char.alive === true;
-            } else {
-              return char.alive === false;
-            } 
+            if (filterStatus != null) {
+              return char.alive === filterStatus;
+            }
+            return true
             });
          
       
@@ -67,7 +67,7 @@ function App() {
           setFilterName('');
           setFilterHouse('');
           setFilterGender('');
-          setFilterStatus('');
+          setFilterStatus(null);
         };
       
 return (
