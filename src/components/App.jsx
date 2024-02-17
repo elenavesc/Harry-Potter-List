@@ -10,6 +10,7 @@ function App() {
     const [characters, setCharacters] = useState([]);
     const [filterName, setFilterName] = useState('');
     const [filterHouse, setFilterHouse] = useState('');
+    const [filterStatus, setFilterStatus] = useState(true);
     const [filterGender, setFilterGender] = useState('');
 
     useEffect(() => {
@@ -29,6 +30,11 @@ function App() {
       const handleGender = (value) => {
         setFilterGender(value);
       };
+      
+      const handleStatus = (value) => {
+        if (value=== 'alive'){setFilterStatus(true)} 
+        else {setFilterStatus(false)};
+      };
     
       const filterCharacters = characters
         .filter((char) =>
@@ -45,13 +51,23 @@ function App() {
             } else {
               return true;
             }
-          }).sort((a, b) => a.name.localeCompare(b.name));
+          }).sort((a, b) => a.name.localeCompare(b.name))
+
+          .filter((char) => {
+            if (filterStatus === true) {
+              return char.alive === true;
+            } else {
+              return char.alive === false;
+            } 
+            });
+         
       
         const handleReset = (ev) => {
           ev.preventDefault();
           setFilterName('');
           setFilterHouse('');
           setFilterGender('');
+          setFilterStatus('');
         };
       
 return (
@@ -66,6 +82,8 @@ return (
                 handleName={handleName}
                 filterName={filterName}
                 handleHouse={handleHouse}
+                handleStatus={handleStatus}
+                filterStatus={filterStatus}
                 handleGender={handleGender}
                 filterGender={filterGender}
                 handleReset={handleReset}

@@ -9,9 +9,10 @@ function CardDetail ({data}) {
     return (
         <article key={data.id} className={'cardDetail ${data.house}'}>
             <img 
+                className='cardDetail_image'
                 src={data.image !==''? data.image : noImg} 
                 alt={data.name} 
-                className='cardDetail_image'/>
+                />
             <div className='cardDetail_text'>
                 <h3 className='cardDetail_text_name'>{data.name} </h3>
                 <p className='cardDetail_text_info'>

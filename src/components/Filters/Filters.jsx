@@ -1,6 +1,7 @@
 import FilterGender from "./FilterGender";
 import FilterHouse from "./FilterHouse";
 import FilterName from "./FilterName";
+import FilterStatus from "./FilterStatus";
 import '../../scss/layout/Filters.scss';
 import PropTypes from 'prop-types';
 
@@ -11,6 +12,8 @@ function Filters({
     handleGender,
     filterGender,
     handleReset,
+    filterStatus,
+    handleStatus,
 
 }) {
     return (
@@ -18,6 +21,7 @@ function Filters({
             <FilterName handleName={handleName} filterName={filterName}/>
             <FilterHouse handleHouse={handleHouse}/>
             <div className="filters_container">
+                <FilterStatus handleStatus={handleStatus} filterStatus={filterStatus}/>
                 <FilterGender handleGender={handleGender} filterGender={filterGender}/>
             </div>
         <button className="resetbtn" onClick={(ev) =>{

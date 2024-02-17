@@ -1,0 +1,29 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 10px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    
+  
+    @media (min-width: 860px) {
+      flex-direction: row;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+        &_container {
+            display: flex;
+            gap: 15px;
+            background-color: bisque;
+            border: none;
+        }
+    }
+    .resetbtn{
+      padding: 3px 10px;
+      border-radius: 10px;
+      border: none;
+      background-color: lightblue;
+    }

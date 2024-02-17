@@ -1,0 +1,29 @@
+.character {
+    &_notFound {
+        text-align: center;
+        padding: 20px;
+        font-size: 2rem;
+        height: 50vh;
+        color: black;  
+    }
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px 15px;
+        color: black;
+        
+        &_card {
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0; 
+        }
+    }
+}
+.link {
+    text-decoration: none;
+    color: black; 
+}
