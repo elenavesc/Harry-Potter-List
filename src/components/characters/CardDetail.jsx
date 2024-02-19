@@ -8,6 +8,7 @@ function CardDetail ({data}) {
     const names = data.alternateNames.join(',');
     return (
         <article key={data.id} className={'cardDetail ${data.house}'}>
+            <section className='card'>
             <img 
                 className='cardDetail_image'
                 src={data.image !==''? data.image : noImg} 
@@ -34,6 +35,7 @@ function CardDetail ({data}) {
                     </>
                 )}
             </div>
+            </section>
         </article>
     );
 }

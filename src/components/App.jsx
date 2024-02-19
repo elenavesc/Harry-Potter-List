@@ -1,6 +1,7 @@
 import apiData from '../services/api';
 import { Route,Routes } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 import { useState, useEffect } from 'react';
 import  Filters from './Filters/Filters';
 import CharacterList from './characters/CharacterList'
@@ -97,6 +98,7 @@ return (
         element={<CharacterDetail data={characters}/>}
         />
         </Routes>
+        <Footer/>
     </div>
 );
 }
