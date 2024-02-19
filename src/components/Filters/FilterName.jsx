@@ -8,9 +8,9 @@ function FilterName ({handleName, filterName}) {
     };
 
     return(
-    <label>
+    <label className='name'>
         Buscar por personaje:
-          <input name="name" type="text" id="name" placeholder="Ej. Harry Potter" value={filterName} onChange={(ev) => { 
+          <input className='name' name="name" type="text" id="name" placeholder="Ej. Harry Potter" value={filterName} onChange={(ev) => { 
             handleName(ev.target.value);}}
             onKeyDown= {handleEnter} />
         </label>

@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 function FilterHouse ({handleHouse}) {
     return(
 
-        <label>Selecciona la casa:
-          <select
+        <label className='name'>Selecciona la casa:
+          <select className='name'
           onChange={(ev) => {
             handleHouse(ev.target.value);
           } }>

@@ -1,0 +1,10 @@
+.header_image{
+    display: flex;
+  flex-direction: column;
+  height: 230px;
+  gap: 20px;
+   
+    @media (min-width: 768px) {
+        height: auto;
+      }
+}

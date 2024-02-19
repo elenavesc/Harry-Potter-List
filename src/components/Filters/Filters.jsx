@@ -17,6 +17,7 @@ function Filters({
 
 }) {
     return (
+        <section className="group">
         <form>
             <FilterName handleName={handleName} filterName={filterName}/>
             <FilterHouse handleHouse={handleHouse}/>
@@ -28,6 +29,7 @@ function Filters({
             handleReset(ev);
         } }>Reset</button>
         </form>
+        </section>
         
     );
 }

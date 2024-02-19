@@ -1,4 +1,5 @@
 .cardDetail {
+  background-image: url(/src/images/fondofilters.jpg);
   min-height: 270px;
   max-height: auto;
   width: 300px;
@@ -6,7 +7,9 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  padding: 20px 0;
+  margin: 20px;
+  margin-right: 20px;
+  padding: 20px;
   background-clip: padding-box;
   @media (min-width: 768px) {
     height: 350px;
