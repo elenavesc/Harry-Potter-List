@@ -14,38 +14,42 @@
     height: 350px;
     width: 480px;
     gap: 15px;
+    align-items: center;
+  }
+  &_image {
+    padding: 10px;
+    width: 150px;
+    height: 200px;
+    @media (min-width: 768px) {
+      width: 220px;
+      height: 300px;
     }
-    &_image {
-        padding: 10px;
-        width: 150px;
-        height: 200px;
-        @media (min-width: 768px) {
-          width: 220px;
-          height: 300px;  
-        }
+  }
+  &_text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    &_name {
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+      @media (min-width: 768px) {
+        font-size: 2rem;
+        margin-bottom: 5px;
+      }
     }
-    &_text {
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        &_name {
-            font-size: 1.6rem;
-            margin-bottom: 5px;
-            @media (min-width: 768px) {
-              font-size: 2rem;
-              margin-bottom: 5px;
-            }
-        }
-        &_info {
-            font-weight: bold;
+    &_info {
+      font-weight: bold;
       font-size: 1rem;
       @media (min-width: 768px) {
         font-size: 1.4rem;
       }
-
-        }
     }
+  }
 }
-.card {
+.cardDetails {
   background-color: black;
   padding: 20px;
+  @media (min-width: 768px) {
+    margin-top: 200px;
+    margin-bottom: 500px;
+  }
 }

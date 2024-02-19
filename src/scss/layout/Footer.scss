@@ -5,10 +5,14 @@
     padding: 30px;
     background-color: black;
     max-height: 100px;
-    &_image{
+
+    @media (max-width:768px) {}
+
+    &_image {
         align-items: center;
         max-height: 80px;
     }
+
     &_text {
         padding-left: 20px;
         text-align: center;

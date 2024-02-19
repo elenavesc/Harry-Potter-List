@@ -1,7 +1,7 @@
-import CharacterCard from './CharacterCard';
-import '../../scss/layout/CharacterList.scss';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import CharacterCard from "./CharacterCard";
+import "../../scss/layout/CharacterList.scss";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function CharacterList({ data, filterName }) {
   if (data.length === 0) {

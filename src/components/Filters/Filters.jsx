@@ -18,19 +18,19 @@ function Filters({
 }) {
     return (
         <section className="group">
-        <form>
-            <FilterName handleName={handleName} filterName={filterName}/>
-            <FilterHouse handleHouse={handleHouse}/>
-            <div className="filters_container">
-                <FilterStatus handleStatus={handleStatus} filterStatus={filterStatus}/>
-                <FilterGender handleGender={handleGender} filterGender={filterGender}/>
-            </div>
-        <button className="resetbtn" onClick={(ev) =>{
-            handleReset(ev);
-        } }>Reset</button>
-        </form>
+            <form>
+                <FilterName handleName={handleName} filterName={filterName} />
+                <FilterHouse handleHouse={handleHouse} />
+                <div className="filters_container">
+                    <FilterStatus handleStatus={handleStatus} filterStatus={filterStatus} />
+                    <FilterGender handleGender={handleGender} filterGender={filterGender} />
+                </div>
+                <button className="resetbtn" onClick={(ev) => {
+                    handleReset(ev);
+                }}>Reset</button>
+            </form>
         </section>
-        
+
     );
 }
 
@@ -41,6 +41,6 @@ Filters.propTypes = {
     handleGender: PropTypes.func,
     filterGender: PropTypes.string,
     handleReset: PropTypes.func,
-  };
-  
+};
+
 export default Filters;
