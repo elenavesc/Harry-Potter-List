@@ -1,6 +1,30 @@
-This exercise consists of developing a search engine for characters from the Harry Potter saga. To do this, first, we must ensure that we are in the correct house (Gryffindor, Slytherin, Ravenclaw, Hufflepuff). However, we also have two additional options for other wizards for those who are not Hogwarts students or Muggles for characters in the saga who are not wizards.
+# Harry Potter
+
+This App consists of developing a search engine for characters from the Harry Potter saga. To do this, first, we must ensure that we are in the correct house (Gryffindor, Slytherin, Ravenclaw, Hufflepuff). However, we also have two additional options for other wizards for those who are not Hogwarts students or Muggles for characters in the saga who are not wizards.
 
 Additionally, we can also filter by gender. Note that all filters are interconnected, and we have a RESET button to clear all fields at once.
+
+## Structure
+
+The app consists of a landing page where we get information from an information API about the characters in the saga.
+
+### Landing Page
+![landing_page-0001](https://github.com/elenavesc/Harry-Potter-List/assets/147326237/8b8a12a5-e7d0-4dbe-9e3e-73e1c9c008d6)
+
+You can search for the character through different filters...
+![búsqueda](https://github.com/elenavesc/Harry-Potter-List/assets/147326237/eb13ad7a-a5e4-48ad-920c-7ca3e8da96cb)
+
+Even by name.
+
+![busqueda2](https://github.com/elenavesc/Harry-Potter-List/assets/147326237/1bb34f7f-54e3-49c9-a75e-152f602d323c)
+
+### Card
+
+Once you click on the character, a card will appear with more information about them.
+
+![carta](https://github.com/elenavesc/Harry-Potter-List/assets/147326237/176e8dc9-6adb-4ef6-b798-61c46b1dcef3)
+
+
 
 ## Project Design
 
